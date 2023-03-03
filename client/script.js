@@ -188,4 +188,10 @@ document.getElementById("query-button").addEventListener("click", placeHolder)
 */
 
 // CODE HERE 
-
+function createFood () {
+    let foodInput = document.querySelector('input')
+    const body = {
+        newFood: foodInput.textContent
+        axios.post(`http://localhost:3000/food`, body).then((result) => console.log(result.data))
+    }
+}
